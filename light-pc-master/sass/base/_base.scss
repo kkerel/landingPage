@@ -1,0 +1,26 @@
+html {
+    // @extend .text-hover;
+    font-family: $base-font;
+    line-height: 1;
+    font-size: 16px;
+    color: #2d363d;
+    background: transparent;
+    // -moz-osx-font-smoothing: grayscale;
+    // font-smoothing: antialiased;
+    // text-rendering: optimizeLegibility !important;
+    // -webkit-font-smoothing: antialiased;
+    // text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    
+
+}
+
+caption,.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}

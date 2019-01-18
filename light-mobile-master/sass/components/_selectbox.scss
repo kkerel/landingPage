@@ -1,0 +1,36 @@
+.selectbox {
+    position: relative;
+    background: #fff url(../images/icon_selectbox_arrow.png) rem(294) rem(15) no-repeat;
+    background-size: rem(14);
+    border: solid 2px #ff850d;
+    font-size: rem(14);
+    height: rem(43);
+    -webkit-border-radius: rem(20);
+    -moz-border-radius: rem(20);
+    border-radius: rem(20);
+    color: $brand-color;
+    width: 100%;
+    label {
+        position: absolute;
+        color: $brand-color;
+        top: rem(14);
+        font-size: rem(13);
+        padding-left: rem(20);
+        width: 100%;
+        white-space: nowrap;
+        line-height: 1;
+        // span {
+        //     @include ellipsis(80px);
+        // }
+    }
+    select {
+        -moz-opacity: 0;
+        -khtml-opacity: 0;
+        -webkit-opacity: 0;
+        opacity: 0;
+        -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+        filter: alpha(opacity=0);
+        width: 100%;
+        height: 100%;
+    }
+}

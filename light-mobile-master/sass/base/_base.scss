@@ -1,0 +1,23 @@
+html {
+    // @extend .text-hover;
+    font-family: $base-font;
+    line-height: 1;
+    font-size: 16px;
+    color: #2d363d;
+    background: transparent;
+}
+
+img {
+    max-width: 100%;
+}
+
+caption,.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}

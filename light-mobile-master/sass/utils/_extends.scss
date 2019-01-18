@@ -1,0 +1,162 @@
+.base-font {
+    font-family: $base-font;
+}
+// .light {
+//     font-family: $base-font-light;
+// }
+.bold {
+    font-family: $base-font-bold;
+}
+.ex-bold {
+    font-family: $base-font-ex;
+}
+//box
+.inner-container {
+    width: 940px;
+    margin: 0 auto
+}
+
+//selectbox 
+.selectbox-normal {
+    .chosen-container {
+        font-size: 20px;
+    }
+    .chosen-container-single .chosen-single {
+        height: 50px;
+        line-height: 50px;
+        color: #111;
+        text-align: center;
+        box-shadow: none;
+        background: #fff;
+        border-radius: 0;
+        border: 2px solid #ccc;
+    }
+    .chosen-container-single .chosen-single div {
+        width: 28px;
+    }
+    .chosen-container-single .chosen-single b {
+        @include triangle(13px, #ff9c00, down);
+        margin-top: 22px;
+    }
+    .chosen-results {
+        li {
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+            &.highlighted {
+                background-image: none;
+                background: #2d363f;
+                color: #fff;
+            }
+        }
+    }
+    .chosen-container .chosen-drop {
+        border: 1px solid #ccc;
+    }
+}
+
+// icon set
+.ico_review_smile {
+    @include spritebox(-0px, -0px, 48px, 48px);
+}
+
+.ico_counsel_tel {
+    display: inline-block;
+    vertical-align: middle;
+    @include spritebox(-48px, -0px, 21px, 20px)
+}
+
+.ico_search_start {
+    @include spritebox(-48px, -21px, 19px, 19px)
+}
+
+.ico_list_box_more {
+    display: inline-block;
+    @include spritebox(-0px, -48px, 18px, 18px)
+}
+
+.ico_arrow_right_ac {
+    @include spritebox(-18px, -48px, 17px, 11px)
+}
+
+.ico_arrow_right_ac_white {
+  @include spritebox(-29px, -48px, 17px, 10px)
+}
+
+
+.ico_footer_more {
+    @include spritebox(-39px, -48px, 15px, 15px)
+}
+
+.ico_fold_arrow {
+    @include spritebox(-68px, -0px, 14px, 22px)
+}
+
+.ico_sidebar_arrow {
+    display: block;
+    margin: 0 auto 5px;
+    @include spritebox(-68px, -14px, 8px, 14px)
+}
+
+.text-hover {
+    a {
+        @include transition(color 0.3s cubic-bezier(.7,.3,0,1),border-color 0.3s cubic-bezier(.7,.3,0,1));
+        &:hover {
+            color: $accent-color;
+            border-color: $accent-color;
+        }
+    }
+}
+
+//type-color
+.insu-type-color1 {
+    background: $type-a-color;
+}
+.insu-type-color2 {
+    background: $type-b-color;
+}
+.insu-type-color3 {
+    background: $type-c-color;
+}
+.insu-type-color4 {
+    background: $type-d-color;
+}
+.insu-type-color5 {
+    background: $type-e-color;
+}
+
+.checkbox {
+    input[type="checkbox"] {
+        @include opacity(0);
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        top: 0;
+        left: 0;
+        border: 0;
+    }
+    input[type="checkbox"]:checked + label {
+        &:before {
+            background-position: 0 -20px;
+        }
+    }
+    label {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            background: url(../images/common/checkbox_bg.png) 0 0 no-repeat;
+            background-size: 20px;
+            vertical-align: middle;
+        }
+    }
+}

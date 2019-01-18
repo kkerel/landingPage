@@ -1,0 +1,314 @@
+#main_wrap{ overflow:hidden; width:100%; min-width:980px; position:relative;
+	.bx-viewport{overflow:visible!important;}
+	img{margin:0 auto;}
+	header{width:980px; margin:0 auto; overflow:hidden; text-align:right; height:39px; line-height:39px; position:relative;
+		a{padding:0px 10px; color:#777777; font-size:12px; font-weight:bold;}
+		.login_wrap{position:absolute; top:0px; right:50%; z-index:10; margin-right:-456px;
+			.first{background:url(../images/common/hd_icon.jpg) left center no-repeat; padding-left:22px;}
+			.last{background:url(../images/common/hd_line.jpg) left center no-repeat;}
+		}
+	}
+	.container_wrap{
+		.main_ban{position:relative; background:url(../images/common/main_banner.jpg) top center no-repeat; height:680px;
+			.main_inner{position:absolute; top: 307px; right: 50%; z-index: 101; margin-right: -820px;}
+		}
+		.view_btn{ cursor:pointer; width:120px; margin:0 auto; font-size:25px; font-weight:bold; color:#bbb; margin-bottom:85px; margin-top:33px; background:url(../images/common/arrow_btn_off.png) right center no-repeat;}
+		.view_content_wrap{position:relative;
+			.view_content{width:100%; font-size:17px; z-index:11; background:#fff; display:none;
+				p{background:url(../images/common/text_bullet.png) left 8px no-repeat; padding-left:15px; height:25px; line-height:25px; color:#9a9999;}
+				.view_inner_content{width:980px; margin:-50px auto 0; padding:0 200px 35px; }
+			}
+		}
+		.view_content_wrap.active{
+			.view_btn{background:url(../images/common/arrow_btn_on.png) right center no-repeat;}
+			.view_content{display:block;}
+		}
+		.contents_main_navi_wrap{width:100%; position:absolute; top:680px; left:0; z-index:12;
+			.contents_navi_wrap{width:100%; min-width:1040px; background:#18273c;
+				ul{width:1040px; margin:0 auto; overflow:hidden;
+					li{width:260px; height:95px; float:left; text-align:center; color:#fff; font-size:20px; font-weight:bold;
+						a{width:260px; height:95px; color:#fff; display:block;}
+						&.now { background-position:left top; background-repeat:no-repeat; color:#000;
+							a{color:#000;}
+						}
+						$imgUrl: '../images/common/con_nav_0';
+						$OvimgUrl: '../images/common/con_nav_on_0';
+						$imgEx:'.png';
+						$widthArray:'260px','260px','260px','260px';
+						@for $i from 1 to 5 {
+							&:nth-child(#{$i}) {width:unquote(nth($widthArray, $i)); background-image:url(#{$imgUrl}#{$i}#{$imgEx});
+								&.now { background-image:url(#{$OvimgUrl}#{$i}#{$imgEx}); }
+							}
+						}
+					}
+				}
+			}
+		}
+		.contents_01{position:relative; height:1555px; margin-top:95px; background:url('../images/common/contents_01.jpg') no-repeat top center;
+			.luckydraw_tongs{position:absolute; top: 475px; left: 50%; margin-left: -297px;
+				.luckydraw_line{height:55px; overflow:hidden;}
+			}
+			.luckydraw_popup{position: absolute; top: 540px; left: 50%; margin-left:-250px; display:none;
+				.luckydraw_close{position: absolute; top: 50px; right: 50%; margin-right: -180px; cursor: pointer;}
+			}
+			.start_btn{position::absolute; width: 277px; height: 58px; top: 1017px; left: 50%; margin-left: -21px; cursor:pointer;}
+		}
+		.contents_02{
+			.hotel_01,.hotel_02,.hotel_03,.hotel_04,.hotel_05{
+				&:hover{background:none;}
+			}
+			.inner_contents_01{background:url('../images/common/contents_02_01.jpg') no-repeat top center; height:646px;}
+			.inner_contents_02{position:relative; background:url('../images/common/contents_02_02.jpg') no-repeat top center; height:609px;
+				.activity_wrap{
+					li{cursor:pointer;
+						.load_type{width:27px; height:27px; background:url('../images/common/blank.png') 0 0 no-repeat; position:absolute;}
+						.map_type{width: 36px; height: 47px; position:absolute;}
+						.map_wrap{width:420px; display:none; position: absolute; top: 82px; right: 50%; margin-right: -545px; z-index:10; overflow:hidden;
+							.map_img{position:relative; clear:both;
+								.map_link{width:249px; height:46px; position:absolute; bottom: 21px; left: 50%; margin-left: -124px;}
+							}
+							.map_close{float:right; padding-bottom:5px;}
+						}
+						/* 1번 로드 맵*/
+						.load_01{top: 173px; left: 50%; margin-left:-462px;
+							&:hover + .map_01{background:url('../images/icon/map_hover01.png') 0 0 no-repeat;}
+						}
+						.map_01{top: 337px; right: 50%; margin-right: -175px;}
+						.map_01.map_type{
+							&:hover{background:url('../images/icon/map_hover01.png') 0 0 no-repeat;}
+						}
+						/* 2번 로드 맵*/
+						.load_02{top: 173px; left: 50%; margin-left:-302px;
+							&:hover + .map_02{background:url('../images/icon/map_hover02.png') 0 0 no-repeat;}
+						}
+						.map_02{top: 316px; right: 50%; margin-right: -135px;}
+						.map_02.map_type{
+							&:hover{background:url('../images/icon/map_hover02.png') 0 0 no-repeat;}
+						}
+						/* 3번 로드 맵*/
+						.load_03{top: 173px; left: 50%; margin-left:-115px;
+							&:hover + .map_03{background:url('../images/icon/map_hover03.png') 0 0 no-repeat;}
+						}
+						.map_03{top: 216px; right: 50%; margin-right: -172px;}
+						.map_03.map_type{
+							&:hover{background:url('../images/icon/map_hover03.png') 0 0 no-repeat;}
+						}
+						/* 4번 로드 맵*/
+						.load_04{top: 257px; left: 50%; margin-left:29px;
+							&:hover + .map_04{background:url('../images/icon/map_hover04.png') 0 0 no-repeat;}
+						}
+						.map_04{top: 260px; right: 50%; margin-right: -206px;}
+						.map_04.map_type{
+							&:hover{background:url('../images/icon/map_hover04.png') 0 0 no-repeat;}
+						}
+						/* 5번 로드 맵*/
+						.load_05{top: 338px; left: 50%; margin-left: -286px;
+							&:hover + .map_05{background:url('../images/icon/map_hover05.png') 0 0 no-repeat;}
+						}
+						.map_05{top: 511px; right: 50%; margin-right: -161px;}
+						.map_05.map_type{
+							&:hover{background:url('../images/icon/map_hover05.png') 0 0 no-repeat;}
+						}
+						/* 6번 로드 맵*/
+						.load_06{top: 501px; left: 50%; margin-left: -151px;
+							&:hover + .map_06{background:url('../images/icon/map_hover06.png') 0 0 no-repeat;}
+						}
+						.map_06{top: 305px; right: 50%; margin-right: -405px;}
+						.map_06.map_type{
+							&:hover{background:url('../images/icon/map_hover06.png') 0 0 no-repeat;}
+						}
+						/* 2018 - 01 26 추가*/
+						.load_market{top: 418px; left: 50%; margin-left: -443px;
+							&:hover ~ .market_01{background:url('../images/icon/market_icon.png') 0 0 no-repeat;}
+							&:hover ~ .market_02{background:url('../images/icon/market_icon.png') 0 0 no-repeat;}
+							&:hover ~ .market_03{background:url('../images/icon/market_icon.png') 0 0 no-repeat;}
+							&:hover ~ .market_04{background:url('../images/icon/market_icon.png') 0 0 no-repeat;}
+							&:hover ~ .market_05{background:url('../images/icon/market_icon.png') 0 0 no-repeat;}
+						}
+						/* // 2018 - 01 26 추가 및 수정 */
+						/* 호텔 1번 */
+						.hotel_01{top: 375px; right: 50%; margin-right: -250px;}
+						/* 호텔 2번 */
+						.hotel_02{top: 427px; right: 50%; margin-right: -294px;}
+						/* 호텔 3번 */
+						.hotel_03{top: 403px; right: 50%; margin-right: -333px;}
+						/* 호텔 4번 */
+						.hotel_04{top: 335px; right: 50%; margin-right: -370px;}
+						/* 호텔 5번 */
+						.hotel_05{top: 363px; right: 50%; margin-right: -423px;}
+						/* 2018 - 01 26 추가 및 수정 */
+						.market_01{top: 417px; right: 50%; margin-right: -91px;
+							&:hover{background:url('../images/icon/market_icon.png') 0 0 no-repeat;}
+						}
+						.market_02{top: 285px; right: 50%; margin-right: -174px;
+							&:hover{background:url('../images/icon/market_icon.png') 0 0 no-repeat;}
+						}
+						.market_03{top: 169px; right: 50%; margin-right: -219px;
+							&:hover{background:url('../images/icon/market_icon.png') 0 0 no-repeat;}
+						}
+						.market_04{top: 395px; right: 50%; margin-right: -373px;
+							&:hover{background:url('../images/icon/market_icon.png') 0 0 no-repeat;}
+						}
+						.market_05{top: 120px; right: 50%; margin-right: -416px;
+							&:hover{background:url('../images/icon/market_icon.png') 0 0 no-repeat;}
+						}
+						/* // 2018 - 01 26 추가 및 수정 */
+					}
+				}
+			}
+			.inner_contents_03{position:relative; background:url('../images/common/contents_02_03.jpg') no-repeat top center; height:644px;
+				.healing_wrap{
+					li{cursor:pointer;
+						.load_type{width:27px; height:27px; background:url('../images/common/blank.png') 0 0 no-repeat; position:absolute;}
+						.map_type{width: 36px; height: 47px; position:absolute;
+							&:hover{background:url('../images/icon/map_hover.png') 0 0 no-repeat;}
+						}
+						.map_wrap{width:420px; display:none; position: absolute; top: 0px; left: 50%; margin-left: -530px; z-index:10; overflow:hidden;
+							.map_img{position:relative; clear:both;
+								.map_link{width:249px; height:46px; position:absolute; bottom: 21px; left: 50%; margin-left: -124px;}
+							}
+							.map_close{float:right; padding-bottom:5px;}
+						}
+						.bx-wrapper{height:532px!important;}
+						/* 1번 로드 맵*/
+						.load_01{top: 204px; right: 50%; margin-right: -453px;
+							&:hover ~ .map_01{background:url('../images/icon/healing_rmap_01.png') 0 0 no-repeat;}
+							&:hover ~ .map_01_01{background:url('../images/icon/healing_map_01.png') 0 0 no-repeat;}
+						}
+						.map_01{top: 429px; left: 50%; margin-left: -209px;}
+						.map_01.map_type{
+							&:hover{background:url('../images/icon/healing_rmap_01.png') 0 0 no-repeat;}
+						}
+						.map_01_01{top:479px; left:50%; margin-left:-317px;}
+						.map_01_01.map_type{
+							&:hover{background:url('../images/icon/healing_map_01.png') 0 0 no-repeat;}
+						}
+						/* 2번 로드 맵*/
+						.load_02{top: 285px; right: 50%; margin-right: -127px;
+							&:hover + .map_02{background:url('../images/icon/healing_map_02.png') 0 0 no-repeat;}
+						}
+						.map_02{top: 391px; left: 50%; margin-left: -305px;}
+						.map_02.map_type{
+							&:hover{background:url('../images/icon/healing_map_02.png') 0 0 no-repeat;}
+						}
+						/* 3번 로드 맵*/
+						.load_03{top: 368px; right: 50%; margin-right: -275px;
+							&:hover + .map_03{background:url('../images/icon/healing_map_03.png') 0 0 no-repeat;}
+						}
+						.map_03{top: 197px; left: 50%; margin-left: -291px;}
+						.map_03.map_type{
+							&:hover{background:url('../images/icon/healing_map_03.png') 0 0 no-repeat;}
+						}
+						/* 4번 로드 맵*/
+						.load_04{top: 448px; right: 50%; margin-right: -475px;
+							&:hover + .map_04{background:url('../images/icon/healing_map_04.png') 0 0 no-repeat;}
+						}
+						.map_04{top: 250px; left: 50%; margin-left: -290px;}
+						.map_04.map_type{
+							&:hover{background:url('../images/icon/healing_map_04.png') 0 0 no-repeat;}
+						}
+						/* 5번 로드 맵*/
+						.load_05{top: 530px; right: 50%; margin-right: -122px;
+							&:hover + .map_05{background:url('../images/icon/healing_map_05.png') 0 0 no-repeat;}
+						}
+						.map_05{top: 173px; left: 50%; margin-left: -216px;}
+						.map_05.map_type{
+							&:hover{background:url('../images/icon/healing_map_05.png') 0 0 no-repeat;}
+						}
+						/* 호텔 1번 */
+						.hotel_01{top: 200px; left: 50%; margin-left: -374px; width: 66px; height: 80px;
+							&:hover{background:none;}
+						}
+						/* 호텔 2번 */
+						.hotel_02{top: 229px; left: 50%; margin-left: -242px; width: 66px; height: 80px;
+							&:hover{background:none;}
+						}
+					}
+					/* prev next */
+					/* 2018 - 01 26 추가 및 수정 */
+					.bx-controls-direction{
+						a{position:absolute; width:9px; height:11px; text-indent:-9999px; z-index:100;}
+						.bx-prev{width:11px; height:22px; bottom: 118px; left: 50%; background:url('../images/popup/healing_prev.jpg') 0 0 no-repeat; margin-left: -170px;}
+						.bx-next{width:11px; height:22px; bottom: 118px; right: 50%; background:url('../images/popup/healing_next.jpg') 0 0 no-repeat; margin-right: -170px;}
+					}
+					/* // 2018 - 01 26 추가 및 수정 */
+				}
+			}
+			.inner_contents_04{position:relative; background:url('../images/common/contents_02_04.jpg') no-repeat top center; height:484px;
+				.select_wrap{
+					input[type="checkbox"],
+					input[type="radio"] { display:none; opacity: 0; filter: alpha(opacity=0); width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;}
+					label:before{content:''; display:inline-block; width:20px; height:20px; background: url(../images/icon/check_btn.png) 0 0 no-repeat; vertical-align:middle; cursor:pointer;}
+					input[type='checkbox']:checked + label:before,
+					input[type="radio"]:checked + label:before{ background: url(../images/icon/check_btn_on.png) 0 0 no-repeat;}
+					.choice_01{position: absolute; top: 185px; left: 50%; margin-left: -147px;}
+					.choice_02{position: absolute; top: 185px; right: 50%; margin-right: -128px;}
+				}
+				.vote_btn{
+					a{position: absolute; top: 226px; left: 50%; margin-left: -283px; width: 564px; height: 107px;}
+				}
+			}
+		}
+		.contents_03{height:1069px; position:relative; background:url('../images/common/contents_03.jpg') no-repeat top center;
+			.hotel_more_btn{
+				a{width:222px; height:22px; position:absolute; top:306px; left:50%; margin-left:-115px; background:url('../images/common/blank.png') 0 0 no-repeat;}
+			}
+			.bx-pager{display:none;}
+			.recommend_slider{position:absolute;
+				h3{position: absolute; top: -57px; left: 50%; z-index: 60; margin-left: -66px;}
+				&.type01{ width: 325px; top: 398px; left: 50%; margin-left: -521px;}
+				&.type02{ width: 325px; top: 455px; right: 50%; margin-right: -162px;}
+				&.type03{ width: 325px; top: 398px; right: 50%; margin-right: -521px;}
+				.bx-wrapper{
+					.bx-viewport{
+						.best_bxslider{
+							.slider{position:relative;
+								.slider_link{width:202px; height:41px; position:absolute; bottom:29px; left:50%; margin-left:-100px; background:url('../images/common/blank.png') 0 0 no-repeat;}
+							}
+						}
+					}
+					/* prev next */
+					.bx-controls-direction{
+						a{position:absolute; width:9px; height:11px; text-indent:-9999px; z-index:100;}
+						.bx-prev{bottom: 156px; left: 50%; background:url('../images/icon/slider_prev.png') 0 0 no-repeat; margin-left: -130px;}
+						.bx-next{bottom: 156px; right: 50%; background:url('../images/icon/slider_next.png') 0 0 no-repeat; margin-right: -130px;}
+					}
+				}
+			}
+		}
+		.contents_04{height:1438px; position:relative; background:url('../images/common/contents_04.jpg') no-repeat top center;
+			.btn_wrap{
+				.reserv{
+					a{width: 491px; height: 77px; top: 1085px; left: 50%; margin-left: -522px;}
+				}
+				.hotel_search{
+					a{width:206px; height:22px; top: 1176px; left: 50%; margin-left: -380px;}
+				}
+				.coupon{
+					a{width:423px; height:202px; top: 1005px; right: 50%; margin-right: -487px;}
+				}
+			}
+			.bx-wrapper{width:490px; position:absolute; top:410px; left:50%; margin-left:-521px;
+				.bx-pager{overflow:hidden;
+						.bx-pager-item{
+							a{width:163px; height:163px; float:left; text-indent:-9999px;}
+							&:nth-child(1){
+								a{background:url('../images/carousel/new_hotel_navi_01.jpg') 0 0 no-repeat;}
+							}
+							&:nth-child(2){
+								a{width:164px; background:url('../images/carousel/new_hotel_navi_02.jpg') 0 0 no-repeat;}
+							}
+							&:nth-child(3){
+								a{background:url('../images/carousel/new_hotel_navi_03.jpg') 0 0 no-repeat;}
+							}
+						}
+				}
+
+				.bx-controls-direction{display:none;}
+			}
+		}
+		.btn_wrap{
+			a{position:absolute; background:url('../images/common/blank.png') 0 0 no-repeat;}
+		}
+	}
+}

@@ -1,0 +1,73 @@
+/// @author Nicolas Gallagher
+/// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix
+@mixin clearfix {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+//font-face
+@mixin font-face($family,$src,$style: normal,$weight: normal) {
+    @font-face {
+        font-family: $family;
+        src: url('#{$src}.eot'); // IE9 compat
+        src: url('#{$src}.eot?#iefix') format('embedded-opentype'), // IE8 and below
+            url('#{$src}.woff') format('woff'), // standards
+            url('#{$src}.ttf') format('truetype'), // Safari, Android, iOS
+            url('#{$src}.svg##{$family}') format('svg'); // legacy iOS
+
+        font-style: $style;
+        font-weight: $weight;
+    }
+}
+
+
+////////////////////////////
+//button
+///////////////////////////
+// $width: button width
+// $font-size: font px
+// $pad: padding
+// $bg: background color
+// $color: font color
+@mixin button($width,$font-size,$pad,$bg,$color,$border,$icon:false) {
+    width: $width;
+    font-size: $font-size;
+    display: inline-block;
+    position: relative;
+    padding: $pad 0;
+    text-align: center;
+    background: $bg;
+    color: $color;
+    border: $border;
+    border-radius: 50px;
+}
+
+//opacity
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin spritebox($left, $top, $height, $width) {
+  background-image: url(../images/common/spritebox-sprite.png);
+  background-repeat: no-repeat;
+  background-position: $left $top;
+  height: $height;
+  width: $width;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow:inset $top $left $blur $color;
+        -moz-box-shadow:inset $top $left $blur $color;
+        box-shadow:inset $top $left $blur $color;
+    } @else {
+        -webkit-box-shadow: $top $left $blur $color;
+        -moz-box-shadow: $top $left $blur $color;
+        box-shadow: $top $left $blur $color;
+    }
+}
